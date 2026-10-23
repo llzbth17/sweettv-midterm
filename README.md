@@ -131,37 +131,8 @@ the Markdown twin `report.md`.
 
 ## Repository layout
 
-This repository was uploaded as a **flat archive**: all files sit at the root level. The raw
-Kaggle CSVs are not committed (Kaggle license); the pipeline code is written for the canonical
-layout below, so to rebuild from raw data put the code files into `midterm/` and the raw CSVs
-into `data/`:
-
-```
-midterm/
-  config.py          fixed split dates, hyperparameters, paths
-  data_prep.py       session dedup, EPG load, interval join, screen time, target
-  core.py            split construction, metrics, RRF, inference split
-  methods.py         popularity, CBF, association rules, PureSVD, PPR
-  evaluate.py        validation harness and inner-split weight tuning
-  run_final.py       hybrid baseline fit, format validation
-  run_final_personal.py  selected personal-history final model
-  analysis.py        bootstrap CIs, overlap, cold-start, figures
-  case_studies.py    fixed-user history / target / Top-5 tables
-  verify.py          hand-computation and integrity checks
-  report.py          PDF + Markdown report
-data/
-  dataset11-30.csv                 viewing log (weeks 11-30)
-  export_arh_11-20-final.csv       EPG (weeks 11-20)
-  export_arh_21-30-final.csv       EPG (weeks 21-30)
-  export_arh_31-42-final.csv       EPG (weeks 31-42)
-  submission.csv                   official sample (user order)
-midterm_artifacts/                 rebuilt parquet caches (generated)
-midterm_results/                   validation tables, logs, case studies (generated)
-midterm_figures/                   figures used by the report (generated)
-midterm_report/                    report.pdf and report.md (generated)
-```
-
-What is committed at the root of this repository:
+All files are at the repository root (flat structure). The raw Kaggle CSVs are not committed
+(Kaggle license).
 
 | File | What it is |
 |---|---|
@@ -172,7 +143,7 @@ What is committed at the root of this repository:
 | `submission_personal_{engagement,train,blend}.csv` | `run_final_personal.py --variant ...` outputs |
 | `midterm_report.pdf` / `report.md` | 6-page report and its Markdown twin |
 | `kaggle_score.png`, `kaggle_submission_screenshot.png` | Kaggle Submission-page screenshot embedded in the report |
-| `config.py`, `data_prep.py`, `core.py`, `methods.py`, `evaluate.py`, `run_final.py`, `run_final_personal.py`, `analysis.py`, `case_studies.py`, `verify.py`, `report.py` | the full pipeline (files of the `midterm/` package) |
+| `config.py`, `data_prep.py`, `core.py`, `methods.py`, `evaluate.py`, `run_final.py`, `run_final_personal.py`, `analysis.py`, `case_studies.py`, `verify.py`, `report.py` | the full pipeline code |
 | `validation_main.csv`, `validation_inner.csv`, `final_info.json`, `hybrid_weights_inner.json`, `personal_validation*.json` | validation and tuning results |
 | `final_top5_long*.csv`, `case_studies.*`, `analysis_*.csv`/`.json`, `method_overlap_main.csv` | generated tables behind the report numbers |
 | `*.log` (`prep`, `final`, `eval_*`, `analysis`, `case_studies`, `verification`, `report_build`, `robustness_all_users`) | run logs |
@@ -192,31 +163,21 @@ All experiments run on CPU; no GPU is required. Peak memory is about 4 GB during
 
 ## Reproduce
 
-To run the pipeline, first restore the canonical layout (create `midterm/` with the ten `.py`
-files and `data/` with the raw CSVs from Kaggle). Then:
+The files in this repository are committed flat (root level), while the code is written for
+the canonical two-level layout — `config.py` resolves `data/`, `midterm_artifacts/`,
+`midterm_results/`, `midterm_figures/` and `midterm_report/` relative to the parent of the
+`midterm/` package. To run the pipeline, first restore that layout (the ten `.py` files into
+`midterm/`, the raw Kaggle CSVs into `data/`), then:
 
 ```bash
 make data       # rebuild sessions, EPG cache, clean overlaps (about 3-5 min)
 make tune       # tune hybrid weights on the inner split
 make eval       # inner + main validation tables
-make final      # fit the personal-history model and write submission.csv
+make final      # fit the personal-history model, write submission.csv
 make analysis   # bootstrap CIs, overlap, cold-start, figures
 make cases      # two fixed-user case-study tables
 make verify     # hand checks and submission format validation
 make report     # PDF and Markdown report
-```
-
-Or run the Python entry points directly:
-
-```bash
-python3 midterm/data_prep.py --force
-python3 midterm/evaluate.py --split inner --tune
-python3 midterm/evaluate.py --split main
-python3 midterm/run_final_personal.py
-python3 midterm/analysis.py
-python3 midterm/case_studies.py
-python3 midterm/verify.py
-python3 midterm/report.py
 ```
 
 `data_prep.py` is idempotent: without `--force` it reuses the parquet caches in
