@@ -55,23 +55,24 @@ and **+0.0065**, respectively. On the clean fixed split the paired gain over cha
 
 ### Kaggle leaderboard scores (confirmed)
 
-| Submission file | Model | Public MAP@5 | Private MAP@5 |
+| Submission | Model | Public MAP@5 | Private MAP@5 |
 |---|---|---:|---:|
-| `submission_personal_043453.csv` | channel-only | **0.44224** (best public) | 0.43453 |
-| **`submission.csv`** | recent-persistence (final) | 0.44048 | **0.43478** (best private) |
-| `submission_gbm_ch04.csv` | CatBoost reranker | 0.44072 | 0.43022 (rejected) |
-| `submission_stable2_h.csv` | lead-in residual reranker | worse than 0.44224 | — (rejected) |
+| **`submission_personal_repeat.csv`** | recent-persistence (final) | 0.44048 | **0.43478** (best private) |
+| channel-only variant | channel-aware repeat, no recency | **0.44224** (best public) | 0.43453 |
+| CatBoost reranker | (local `submission_gbm_ch04.csv`) | 0.44072 | 0.43022 (rejected) |
+| lead-in residual reranker | (local `submission_stable2_h.csv`) | worse than 0.44224 | — (rejected) |
 
-The current `submission.csv` is the final recent-persistence model, selected as the best
-**private** score. Its Submission page screenshot (public 0.44048 / private 0.43478, user
-elizavetagringruz) is embedded in the report (`midterm_figures/kaggle_score.png`). The
-channel-variant file is kept separately as `submission_personal_043453.csv` for the best
-public score. For context: the public leaderboard maximum was 0.44297, so the best public
-score above is within 0.00073 of the winner; the 0.43006/0.41565/0.40026 early submissions
-(`submission_personal_043006.csv`, `submission_personal_041.csv`, `submission_personal_040.csv`)
-and the older five-way hybrid (`submission_hybrid_previous.csv`) remain available for
-reproducibility. A further feature/ensemble search on five 12-week mirrors found no factor
-that improves the final model (see `midterm_results/final_search_log.md`).
+The file uploaded to Kaggle and selected as the final one (best **private** score) is
+`submission_personal_repeat.csv` — the recent-persistence model. In this repository
+`submission.csv` is the **official Kaggle sample** (zeroed template that fixes the user
+order); the best-public channel-only variant and the two rejected candidates were scored on
+Kaggle but are kept locally, not committed here. The Submission-page screenshot (public
+0.44048 / private 0.43478, user elizavetagringruz) is committed as `kaggle_score.png` and
+embedded in the report. For context, the public leaderboard maximum was 0.44297, so the best
+public score is within 0.00073 of the winner. Earlier submissions (0.43006 / 0.41565 /
+0.40026) and the older five-way hybrid (`submission_final.csv`) stay reproducible via
+`run_final_personal.py --variant ...`. A further feature/ensemble search on five 12-week
+mirrors found no factor that improves the final model (see `final_search_log.md`).
 
 ### Lead-in residual reranker (tested, rejected)
 
@@ -123,10 +124,17 @@ function.
 Paired bootstrap: hybrid − PPR = `+0.0144` `[0.0051, 0.0227]`;
 hybrid − popularity = `+0.0456` `[0.0342, 0.0563]`.
 
-Full numbers, diagnostics, case studies, and the verification log are in `midterm_results/`.
-The report is `midterm_report/midterm_report.pdf` (6 pages including references).
+Full numbers, diagnostics, case studies, and the verification log are committed at the repo
+root (`*.log`, `*.json`, `validation_*.csv`, `case_studies.*`, `final_*.csv`, `score_ceiling.md`,
+`final_search_log.md`). The report is `midterm_report.pdf` (6 pages including references), with
+the Markdown twin `report.md`.
 
 ## Repository layout
+
+This repository was uploaded as a **flat archive**: all files sit at the root level. The raw
+Kaggle CSVs are not committed (Kaggle license); the pipeline code is written for the canonical
+layout below, so to rebuild from raw data put the code files into `midterm/` and the raw CSVs
+into `data/`:
 
 ```
 midterm/
@@ -135,24 +143,42 @@ midterm/
   core.py            split construction, metrics, RRF, inference split
   methods.py         popularity, CBF, association rules, PureSVD, PPR
   evaluate.py        validation harness and inner-split weight tuning
-  run_final.py       hybrid baseline fit, submission.csv, format validation
+  run_final.py       hybrid baseline fit, format validation
   run_final_personal.py  selected personal-history final model
   analysis.py        bootstrap CIs, overlap, cold-start, figures
   case_studies.py    fixed-user history / target / Top-5 tables
   verify.py          hand-computation and integrity checks
   report.py          PDF + Markdown report
 data/
-  dataset11-30.csv
-  export_arh_11-20-final.csv
-  export_arh_21-30-final.csv
-  export_arh_31-42-final.csv
-  submission.csv                 official sample (user order)
-midterm_artifacts/               rebuilt parquet caches (generated)
-midterm_results/                 validation tables, logs, case studies (generated)
-midterm_figures/                 figures used by the report (generated)
-midterm_report/                  report.pdf and report.md (generated)
-submission.csv                   final Kaggle submission (1,260 rows)
+  dataset11-30.csv                 viewing log (weeks 11-30)
+  export_arh_11-20-final.csv       EPG (weeks 11-20)
+  export_arh_21-30-final.csv       EPG (weeks 21-30)
+  export_arh_31-42-final.csv       EPG (weeks 31-42)
+  submission.csv                   official sample (user order)
+midterm_artifacts/                 rebuilt parquet caches (generated)
+midterm_results/                   validation tables, logs, case studies (generated)
+midterm_figures/                   figures used by the report (generated)
+midterm_report/                    report.pdf and report.md (generated)
 ```
+
+What is committed at the root of this repository:
+
+| File | What it is |
+|---|---|
+| `submission_personal_repeat.csv` | **final Kaggle submission** (1,260 rows; 0.44048 public / 0.43478 private) |
+| `submission.csv` | official Kaggle **sample** (zeroed template; user order) |
+| `submission_final.csv` | RRF hybrid candidate (previous best, kept for reproducibility) |
+| `submission_personal.csv` | first personal-history submission (0.40026) |
+| `submission_personal_{engagement,train,blend}.csv` | `run_final_personal.py --variant ...` outputs |
+| `midterm_report.pdf` / `report.md` | 6-page report and its Markdown twin |
+| `kaggle_score.png`, `kaggle_submission_screenshot.png` | Kaggle Submission-page screenshot embedded in the report |
+| `config.py`, `data_prep.py`, `core.py`, `methods.py`, `evaluate.py`, `run_final.py`, `run_final_personal.py`, `analysis.py`, `case_studies.py`, `verify.py`, `report.py` | the full pipeline (files of the `midterm/` package) |
+| `validation_main.csv`, `validation_inner.csv`, `final_info.json`, `hybrid_weights_inner.json`, `personal_validation*.json` | validation and tuning results |
+| `final_top5_long*.csv`, `case_studies.*`, `analysis_*.csv`/`.json`, `method_overlap_main.csv` | generated tables behind the report numbers |
+| `*.log` (`prep`, `final`, `eval_*`, `analysis`, `case_studies`, `verification`, `report_build`, `robustness_all_users`) | run logs |
+| `final_search_log.md`, `score_ceiling.md`, `lead_reranker_validation.md`, `case_studies.md` | analysis notes |
+| `fig_pipeline.png`, `fig_map_ci.png`, `fig_overlap.png` | report figures |
+| `Makefile`, `requirements.txt` | environment / entry points |
 
 ## Environment
 
@@ -166,7 +192,8 @@ All experiments run on CPU; no GPU is required. Peak memory is about 4 GB during
 
 ## Reproduce
 
-The committed artifacts can be used directly. To rebuild everything from the raw CSVs:
+To run the pipeline, first restore the canonical layout (create `midterm/` with the ten `.py`
+files and `data/` with the raw CSVs from Kaggle). Then:
 
 ```bash
 make data       # rebuild sessions, EPG cache, clean overlaps (about 3-5 min)
@@ -213,21 +240,20 @@ python3 midterm/report.py
 
 ## Submission
 
-`submission.csv` contains `user_id,tv_show_id` for 1,260 users in the sample order. Each
-`tv_show_id` field is five space-separated positive programme IDs, all distinct and all airing in
-the test window. `run_final_personal.py` validates the format and prints
+`submission_personal_repeat.csv` (1,260 rows) is the file uploaded to Kaggle (0.44048 public /
+0.43478 private); `submission.csv` in this repository is the official zeroed **sample** that
+fixes the user order. Each field is five space-separated positive programme IDs, all distinct
+and all airing in the test window. `run_final_personal.py` validates the format and prints
 `submission validation: OK`. The default `--variant repeat` writes the selected channel-aware
-repeat + recent-persistence model; `--variant engagement` reproduces the previous 0.41565 submission, `--variant test` the
-0.40026 full-view/future-exposure submission, and `--variant train` the exact public-solution
-recipe. All variants write a valid file.
+repeat + recent-persistence model; `--variant engagement` reproduces the previous 0.41565
+submission, `--variant test` the 0.40026 full-view/future-exposure submission, and
+`--variant train` the exact public-solution recipe. All variants write a valid file.
 
 ## Before submitting
 
-Replace the placeholders in `midterm_report/midterm_report.pdf` and `report.md`:
-
 - Student/Email/Kaggle are already filled in (Elizaveta Gringruz, emgringruz@edu.hse.ru, elizavetagringruz)
-- `https://github.com/llzbth17/sweettv-midterm`
-- the Kaggle score screenshot (already inserted, `midterm_figures/kaggle_score.png`)
+- GitHub URL: `https://github.com/llzbth17/sweettv-midterm` (already inserted in the report)
+- the Kaggle score screenshot is already inserted (`kaggle_score.png`)
 
-See `SUBMISSION_CHECKLIST.md` for the full list. Attach the original, unmodified AI-session
-export `elizaveta_gringruz_midterm_session.json` separately; do not edit it.
+Attach the original, unmodified AI-session export `elizaveta_gringruz_midterm_session.json`
+separately; do not edit it.
