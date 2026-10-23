@@ -221,13 +221,3 @@ repeat + recent-persistence model; `--variant engagement` reproduces the previou
 0.40026 full-view/future-exposure submission, and `--variant train` the exact public-solution
 recipe. All variants write a valid file.
 
-## Before submitting
-
-Replace the placeholders in `midterm_report/midterm_report.pdf` and `report.md`:
-
-- Student/Email/Kaggle are already filled in (Elizaveta Gringruz, emgringruz@edu.hse.ru, elizavetagringruz)
-- `https://github.com/llzbth17/sweettv-midterm`
-- the Kaggle score screenshot (already inserted, `midterm_figures/kaggle_score.png`)
-
-See `SUBMISSION_CHECKLIST.md` for the full list. Attach the original, unmodified AI-session
-export separately; do not edit it.
