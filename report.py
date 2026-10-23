@@ -278,7 +278,7 @@ def build_markdown(vt, an, aj, cs, csj):
         "",
         "**Student:** Elizaveta Gringruz  |  **Team:** Individual  |  **Email:** emgringruz@edu.hse.ru  ",
         "**Date:** 2026-10-22  |  **Assignment:** LLM4Rec Midterm Exam  ",
-        "**Kaggle:** elizavetagringruz  |  **GitHub:** https://github.com/<your-username>/sweettv-midterm",
+        "**Kaggle:** elizavetagringruz  |  **GitHub:** https://github.com/llzbth17/sweettv-midterm",
         "",
         "## Abstract",
         "",
@@ -444,7 +444,7 @@ def build_markdown(vt, an, aj, cs, csj):
         "python3 midterm/report.py                  # this PDF",
         "```",
         "",
-        "**GitHub:** `https://github.com/<your-username>/sweettv-midterm` — replace before submission. The repository contains `midterm/` (code), `midterm_results/` (tables, logs, case studies), `midterm_figures/` (figures), and the final `submission.csv`.",
+        "**GitHub:** `https://github.com/llzbth17/sweettv-midterm`. The repository contains `midterm/` (code), `midterm_results/` (tables, logs, case studies), `midterm_figures/` (figures), and the final `submission.csv`.",
         "",
         "![Kaggle submission score](midterm_figures/kaggle_score.png)",
         "",
@@ -528,8 +528,7 @@ def build_pdf(vt, an, aj, cs, csj):
     story.append(meta)
     story.append(Spacer(1, 2))
     story.append(P("<b>Code &amp; reproducibility:</b> "
-                   "<font color='#8b1a1a'>https://github.com/&lt;your-username&gt;/sweettv-midterm</font> "
-                   "(replace before submission)", "subtitle"))
+                   "<font color='#8b1a1a'>https://github.com/llzbth17/sweettv-midterm</font>", "subtitle"))
     story.append(Spacer(1, 4))
 
     story.append(P("<b>Abstract</b>", "h2"))
@@ -942,8 +941,8 @@ def build_pdf(vt, an, aj, cs, csj):
     ]))
     story.append(box)
     story.append(P(
-        "<b>GitHub:</b> <font color='#8b1a1a'>https://github.com/&lt;your-username&gt;/sweettv-midterm</font> "
-        "— replace before submission. The repository contains <font face='DVM'>midterm/</font> "
+        "<b>GitHub:</b> <font color='#8b1a1a'>https://github.com/llzbth17/sweettv-midterm</font>. "
+        "The repository contains <font face='DVM'>midterm/</font> "
         "(code), <font face='DVM'>midterm_results/</font> (tables, logs, case studies), "
         "<font face='DVM'>midterm_figures/</font> (figures), and the final "
         "<font face='DVM'>submission.csv</font>."))

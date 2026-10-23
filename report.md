@@ -2,7 +2,7 @@
 
 **Student:** Elizaveta Gringruz  |  **Team:** Individual  |  **Email:** emgringruz@edu.hse.ru  
 **Date:** 2026-10-22  |  **Assignment:** LLM4Rec Midterm Exam  
-**Kaggle:** elizavetagringruz  |  **GitHub:** https://github.com/<your-username>/sweettv-midterm
+**Kaggle:** elizavetagringruz  |  **GitHub:** https://github.com/llzbth17/sweettv-midterm
 
 ## Abstract
 
@@ -221,7 +221,7 @@ python3 midterm/verify.py
 python3 midterm/report.py                  # this PDF
 ```
 
-**GitHub:** `https://github.com/<your-username>/sweettv-midterm` — replace before submission. The repository contains `midterm/` (code), `midterm_results/` (tables, logs, case studies), `midterm_figures/` (figures), and the final `submission.csv`.
+**GitHub:** `https://github.com/llzbth17/sweettv-midterm`. The repository contains `midterm/` (code), `midterm_results/` (tables, logs, case studies), `midterm_figures/` (figures), and the final `submission.csv`.
 
 ![Kaggle submission score](midterm_figures/kaggle_score.png)
 

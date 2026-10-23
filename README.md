@@ -53,12 +53,25 @@ additional 4-8 week mirrors (SE `0.0003`). Relative to repeat-only, the final ga
 and **+0.0065**, respectively. On the clean fixed split the paired gain over channel-only is
 `+0.0027`; the wide split is flat (`-0.0002`).
 
-The channel-only submission that scored **0.43453 private / 0.44224 public** is kept as
-`submission_personal_043453.csv`. The earlier 0.43006 private submission is
-`submission_personal_043006.csv`; the 0.41565 submission is `submission_personal_041.csv`; the
-0.40026 submission is `submission_personal_040.csv`; the older five-way hybrid remains available as
-`submission_hybrid_previous.csv`. The current `submission.csv` is the final recent-persistence
-model and is pending a new Kaggle upload.
+### Kaggle leaderboard scores (confirmed)
+
+| Submission file | Model | Public MAP@5 | Private MAP@5 |
+|---|---|---:|---:|
+| `submission_personal_043453.csv` | channel-only | **0.44224** (best public) | 0.43453 |
+| **`submission.csv`** | recent-persistence (final) | 0.44048 | **0.43478** (best private) |
+| `submission_gbm_ch04.csv` | CatBoost reranker | 0.44072 | 0.43022 (rejected) |
+| `submission_stable2_h.csv` | lead-in residual reranker | worse than 0.44224 | — (rejected) |
+
+The current `submission.csv` is the final recent-persistence model, selected as the best
+**private** score. Its Submission page screenshot (public 0.44048 / private 0.43478, user
+elizavetagringruz) is embedded in the report (`midterm_figures/kaggle_score.png`). The
+channel-variant file is kept separately as `submission_personal_043453.csv` for the best
+public score. For context: the public leaderboard maximum was 0.44297, so the best public
+score above is within 0.00073 of the winner; the 0.43006/0.41565/0.40026 early submissions
+(`submission_personal_043006.csv`, `submission_personal_041.csv`, `submission_personal_040.csv`)
+and the older five-way hybrid (`submission_hybrid_previous.csv`) remain available for
+reproducibility. A further feature/ensemble search on five 12-week mirrors found no factor
+that improves the final model (see `midterm_results/final_search_log.md`).
 
 ### Lead-in residual reranker (tested, rejected)
 
@@ -213,7 +226,7 @@ recipe. All variants write a valid file.
 Replace the placeholders in `midterm_report/midterm_report.pdf` and `report.md`:
 
 - Student/Email/Kaggle are already filled in (Elizaveta Gringruz, emgringruz@edu.hse.ru, elizavetagringruz)
-- `https://github.com/<your-username>/sweettv-midterm`
+- `https://github.com/llzbth17/sweettv-midterm`
 - the Kaggle score screenshot (already inserted, `midterm_figures/kaggle_score.png`)
 
 See `SUBMISSION_CHECKLIST.md` for the full list. Attach the original, unmodified AI-session
