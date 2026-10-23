@@ -1,0 +1,22 @@
+{
+  "train_rows": 3847592,
+  "train_users": 4897,
+  "eval_users": 1260,
+  "candidates": 6646,
+  "candidates_with_train_history": 2826,
+  "density_pct": 0.5380866115677845
+}
+  popularity   shape=(1260, 6646) nonzero_rows=1260 time=0.0s {}
+  cbf          shape=(1260, 6646) nonzero_rows=1255 time=1.0s {'features': 20336, 'seconds': 0.99}
+  ar           shape=(1260, 6646) nonzero_rows=1255 time=0.9s {'rules': 142296, 'items_with_rules': 3332, 'seconds': 0.86}
+  mf           shape=(1260, 6646) nonzero_rows=1255 time=0.1s {'factors': 32, 'explained_variance': 0.2297482043504715, 'seconds': 0.08}
+  ppr          shape=(1260, 6646) nonzero_rows=1255 time=2.1s {'alpha': 0.15, 'iterations': 20, 'seconds': 2.11}
+hybrid weights: {'popularity': 0.0592, 'cbf': 0.0175, 'ar': 0.2237, 'mf': 0.4095, 'ppr': 0.2901}
+wrote /Users/emgringruz/Desktop/sweettv/submission.csv (1260, 2)
+            user_id                              tv_show_id
+8377619604347126107   2400480 20088 240081 6700482 12001682
+8381667675275833309 2400480 240081 6700482 10002514 2400467
+8387147770138767246   240081 2400480 200344 6200371 1100411
+
+submission validation: OK
+long-form top5: (6300, 6)

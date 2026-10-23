@@ -1,0 +1,39 @@
+/Users/emgringruz/Library/Python/3.9/lib/python/site-packages/sklearn/utils/extmath.py:547: RuntimeWarning: divide by zero encountered in matmul
+  U = Q @ Uhat
+/Users/emgringruz/Library/Python/3.9/lib/python/site-packages/sklearn/utils/extmath.py:547: RuntimeWarning: overflow encountered in matmul
+  U = Q @ Uhat
+/Users/emgringruz/Library/Python/3.9/lib/python/site-packages/sklearn/utils/extmath.py:547: RuntimeWarning: invalid value encountered in matmul
+  U = Q @ Uhat
+/Users/emgringruz/Desktop/sweettv/midterm/methods.py:166: RuntimeWarning: divide by zero encountered in matmul
+  S = U[s.eval_rows] @ V[:, s.cand_idx]
+/Users/emgringruz/Desktop/sweettv/midterm/methods.py:166: RuntimeWarning: overflow encountered in matmul
+  S = U[s.eval_rows] @ V[:, s.cand_idx]
+/Users/emgringruz/Desktop/sweettv/midterm/methods.py:166: RuntimeWarning: invalid value encountered in matmul
+  S = U[s.eval_rows] @ V[:, s.cand_idx]
+
+=== inner split: 2020-04-20 -> 2020-05-18 ===
+{
+  "train_rows": 1455448,
+  "val_rows": 928148,
+  "train_users": 4811,
+  "eval_users": 1004,
+  "candidates": 4022,
+  "candidates_with_train_history": 883,
+  "target_shows": 730,
+  "target_shows_in_pool": 730,
+  "density_pct": 0.24258942031790173
+}
+  popularity   shape=(1004, 4022) nonzero_rows=1004 time=0.0s {}
+  cbf          shape=(1004, 4022) nonzero_rows= 999 time=0.5s {'features': 20320, 'seconds': 0.46}
+  ar           shape=(1004, 4022) nonzero_rows= 999 time=0.1s {'rules': 24964, 'items_with_rules': 1048, 'seconds': 0.08}
+  mf           shape=(1004, 4022) nonzero_rows= 999 time=0.1s {'factors': 32, 'explained_variance': 0.385409951210022, 'seconds': 0.06}
+  ppr          shape=(1004, 4022) nonzero_rows= 999 time=0.6s {'alpha': 0.15, 'iterations': 20, 'seconds': 0.58}
+tuned weights: {'popularity': 0.0592, 'cbf': 0.0175, 'ar': 0.2237, 'mf': 0.4095, 'ppr': 0.2901}
+
+split     method    MAP@5   NDCG@5  Recall@5  Coverage   Novelty  Users_with_hit  Median_AP  Seconds  Users
+inner     hybrid 0.329449 0.453232  0.399004  0.016161  4.812733             885   0.333333     1.18   1004
+inner        ppr 0.303596 0.428813  0.381873  0.017156  4.305994             892   0.286667     0.58   1004
+inner         ar 0.278586 0.402706  0.342829  0.010691  4.278792             869   0.256667     0.08   1004
+inner popularity 0.261328 0.374610  0.322908  0.001243  4.136634             798   0.200000     0.00   1004
+inner         mf 0.231112 0.346873  0.331275  0.018399  5.675818             830   0.200000     0.06   1004
+inner        cbf 0.189104 0.290987  0.233865  0.082546 11.158429             715   0.200000     0.46   1004

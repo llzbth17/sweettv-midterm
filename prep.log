@@ -1,0 +1,9 @@
+sessions=5,821,865  EPG identified rows=381,892
+overlaps=3,847,592  users=4,895  shows=4,363
+
+--- data integrity ---
+EPG rows with tv_show_id==0: 88.91%
+sessions: 5,821,865; with >=1 identified overlap: 2,963,956 (50.9%)
+overlap rows: 3,847,592; duplicate keys: 0
+screen-time quantiles: {0.5: 0.116, 0.8: 0.593, 0.9: 1.0, 0.95: 1.0, 0.99: 1.0}
+validation targets: users=4,623; exactly-5 users=3,923

@@ -1,0 +1,12 @@
+{'train_rows': 2383596, 'val_rows': 1463996, 'train_users': 4849, 'eval_users': 1236, 'candidates': 6376, 'candidates_with_train_history': 1827, 'target_shows': 815, 'target_shows_in_pool': 815, 'density_pct': 0.2899140958716461}
+  popularity   shape=(1236, 6376) nonzero_rows=1236 time=0.0s {}
+  cbf          shape=(1236, 6376) nonzero_rows=1222 time=0.8s {'features': 20336, 'seconds': 0.79}
+  ar           shape=(1236, 6376) nonzero_rows=1222 time=0.2s {'rules': 63377, 'items_with_rules': 1947, 'seconds': 0.23}
+  mf           shape=(1236, 6376) nonzero_rows=1222 time=0.1s {'factors': 32, 'explained_variance': 0.29098695516586304, 'seconds': 0.05}
+  ppr          shape=(1236, 6376) nonzero_rows=1222 time=1.2s {'alpha': 0.15, 'iterations': 20, 'seconds': 1.18}
+popularity {'MAP@5': 0.26532969255663436, 'NDCG@5': 0.3723310498131136, 'Recall@5': 0.3307308522114347, 'Coverage': 0.0007841907151819323, 'Users': 1236, 'Novelty': 4.467078874734471}
+cbf {'MAP@5': 0.1582692826321467, 'NDCG@5': 0.2446164736713963, 'Recall@5': 0.1997437971952535, 'Coverage': 0.07779171894604768, 'Users': 1236, 'Novelty': 12.587501059786025}
+ar {'MAP@5': 0.25860459367134125, 'NDCG@5': 0.3720578930250875, 'Recall@5': 0.31723300970873786, 'Coverage': 0.008626097867001255, 'Users': 1236, 'Novelty': 4.602805746758135}
+mf {'MAP@5': 0.20820388349514565, 'NDCG@5': 0.3155848073915427, 'Recall@5': 0.3011057173678533, 'Coverage': 0.013331242158092848, 'Users': 1236, 'Novelty': 6.0555163745212806}
+ppr {'MAP@5': 0.2952013664149587, 'NDCG@5': 0.41178161725332685, 'Recall@5': 0.3690938511326861, 'Coverage': 0.016624843161856962, 'Users': 1236, 'Novelty': 4.666632873845088}
+hybrid {'MAP@5': 0.30502449658396263, 'NDCG@5': 0.42323552966514694, 'Recall@5': 0.3800970873786408, 'Coverage': 0.010978670012547051, 'Users': 1236, 'Novelty': 5.1090207512184715}

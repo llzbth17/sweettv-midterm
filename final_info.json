@@ -1,0 +1,46 @@
+{
+  "diagnostics": {
+    "train_rows": 3847592,
+    "train_users": 4897,
+    "eval_users": 1260,
+    "candidates": 6646,
+    "candidates_with_train_history": 2826,
+    "density_pct": 0.5380866115677845
+  },
+  "methods": {
+    "popularity": {
+      "wall_seconds": 0.02
+    },
+    "cbf": {
+      "features": 20336,
+      "seconds": 0.99,
+      "wall_seconds": 0.99
+    },
+    "ar": {
+      "rules": 142296,
+      "items_with_rules": 3332,
+      "seconds": 0.86,
+      "wall_seconds": 0.86
+    },
+    "mf": {
+      "factors": 32,
+      "explained_variance": 0.2297482043504715,
+      "seconds": 0.08,
+      "wall_seconds": 0.08
+    },
+    "ppr": {
+      "alpha": 0.15,
+      "iterations": 20,
+      "seconds": 2.11,
+      "wall_seconds": 2.11
+    }
+  },
+  "hybrid_weights": {
+    "popularity": 0.0592,
+    "cbf": 0.0175,
+    "ar": 0.2237,
+    "mf": 0.4095,
+    "ppr": 0.2901
+  },
+  "valid": true
+}

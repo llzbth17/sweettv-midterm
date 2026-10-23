@@ -1,0 +1,69 @@
+{
+  "diagnostics": {
+    "train_rows": 2383596,
+    "val_rows": 1463996,
+    "train_users": 4847,
+    "eval_users": 1124,
+    "candidates": 6376,
+    "candidates_with_train_history": 1827,
+    "target_shows": 815,
+    "target_shows_in_pool": 815,
+    "density_pct": 0.29003372207171696,
+    "cold_candidates": 4549,
+    "cold_candidate_share": 0.713456712672522,
+    "train_full_view_events": 100458,
+    "train_distinct_users": 4726,
+    "method_seconds": {
+      "popularity": 0.0,
+      "cbf": 0.75,
+      "ar": 0.23,
+      "mf": 0.05,
+      "ppr": 1.07
+    }
+  },
+  "paired_bootstrap": {
+    "hybrid_minus_ppr": {
+      "mean": 0.014418742586002373,
+      "ci_low": 0.005123220640569396,
+      "ci_high": 0.022706924673784098,
+      "share_users_better": 0.37277580071174377,
+      "share_users_worse": 0.2820284697508897
+    },
+    "hybrid_minus_popularity": {
+      "mean": 0.04560498220640569,
+      "ci_low": 0.03415806642941874,
+      "ci_high": 0.05629544780545669,
+      "share_users_better": 0.48487544483985767,
+      "share_users_worse": 0.28825622775800713
+    },
+    "ppr_minus_popularity": {
+      "mean": 0.031186239620403317,
+      "ci_low": 0.026316725978647686,
+      "ci_high": 0.03639687129300118,
+      "share_users_better": 0.4208185053380783,
+      "share_users_worse": 0.14412811387900357
+    },
+    "mf_minus_popularity": {
+      "mean": -0.05666073546856465,
+      "ci_low": -0.07413004151838672,
+      "ci_high": -0.0404761269276394,
+      "share_users_better": 0.33362989323843417,
+      "share_users_worse": 0.5195729537366548
+    }
+  },
+  "weights": {
+    "popularity": 0.0592,
+    "cbf": 0.0175,
+    "ar": 0.2237,
+    "mf": 0.4095,
+    "ppr": 0.2901
+  },
+  "overlap_mean": {
+    "popularity": 0.5222255173322788,
+    "cbf": 0.3105735374418649,
+    "ar": 0.5181660594249563,
+    "mf": 0.3958345101583536,
+    "ppr": 0.5750196529778381,
+    "hybrid": 0.5382891788585739
+  }
+}

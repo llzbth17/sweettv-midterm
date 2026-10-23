@@ -1,0 +1,48 @@
+{
+  "diagnostics": {
+    "train_rows": 2383596,
+    "val_rows": 1463996,
+    "train_users": 4847,
+    "eval_users": 1124,
+    "candidates": 6376,
+    "candidates_with_train_history": 1827,
+    "target_shows": 815,
+    "target_shows_in_pool": 815,
+    "density_pct": 0.29003372207171696
+  },
+  "methods": {
+    "popularity": {
+      "wall_seconds": 0.0
+    },
+    "cbf": {
+      "features": 20336,
+      "seconds": 0.76,
+      "wall_seconds": 0.76
+    },
+    "ar": {
+      "rules": 63377,
+      "items_with_rules": 1947,
+      "seconds": 0.23,
+      "wall_seconds": 0.23
+    },
+    "mf": {
+      "factors": 32,
+      "explained_variance": 0.29093867540359497,
+      "seconds": 0.05,
+      "wall_seconds": 0.05
+    },
+    "ppr": {
+      "alpha": 0.15,
+      "iterations": 20,
+      "seconds": 1.07,
+      "wall_seconds": 1.07
+    }
+  },
+  "hybrid_weights": {
+    "popularity": 0.0592,
+    "cbf": 0.0175,
+    "ar": 0.2237,
+    "mf": 0.4095,
+    "ppr": 0.2901
+  }
+}

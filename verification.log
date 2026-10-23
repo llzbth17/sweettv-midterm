@@ -1,0 +1,52 @@
+==============================================================================
+SWEET.TV midterm — verification log
+==============================================================================
+
+[1] Interval join, one concrete row
+    session: user=6519574208115912303, channel=4, 2020-03-11 22:00:04 -> 2020-03-12 00:04:12
+    airing : show=5200303, channel=4, 2020-03-11 22:00:00 + 6300s (end 2020-03-11 23:45:00)
+    overlap = min(stop, end) - max(start, start) = 6296s
+    screen time = 6296/6300 = 0.999365
+    table value: seconds=6296, ratio=0.999365
+    MATCH
+
+[2] Target recipe for user 6519574208115912303, validation window
+    full-view frequency (frequency, seconds):
+        2400480  freq= 9  secs=   7470
+         200337  freq= 4  secs=  11210
+          20088  freq= 3  secs=   7452
+         240081  freq= 2  secs=   1932
+        2400508  freq= 2  secs=   1500
+       90076608  freq= 1  secs=   7141
+       90074173  freq= 1  secs=   6783
+    top-5 programme ids: [2400480, 200337, 20088, 240081, 2400508]
+    MATCH
+
+[3] Join integrity
+    overlap rows: 3,847,592
+    duplicate session-airing keys: 0
+    rows with screen time > 1: 0
+    MATCH
+
+[4] Fixed candidate pool
+    validation candidates: 6,376
+    target programmes: 815
+    target programmes inside pool: 815
+    MATCH (100% target containment)
+
+[5] Hand-computed AP@5 for user 14874594108965844718
+    rank 1: 12001682 HIT  -> cumulative hits=1, add 1/1
+    rank 2: 2400480 HIT  -> cumulative hits=2, add 2/2
+    rank 3: 12001734 miss
+    rank 4: 20088 HIT  -> cumulative hits=3, add 3/4
+    rank 5: 240081 miss
+    AP@5 = (1/1 + 2/2 + 3/4) / 5 = 0.5500
+    AP@5 = 0.5500
+    map_at_k implementation = 0.5500
+    MATCH
+
+[6] submission.csv
+    rows=1260, users_match=True
+    exactly 5 ids per row: True
+    unique ids per row: True
+    all ids positive: True

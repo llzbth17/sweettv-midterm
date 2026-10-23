@@ -1,0 +1,87 @@
+user_id,role,section,method,rank,tv_show_id,title,category,hit
+6519574208115912303,News/film generalist,target,target,1,2400480,ТСН.,Инфо,True
+6519574208115912303,News/film generalist,target,target,2,200337,Утро с Интером.,Развлечения,True
+6519574208115912303,News/film generalist,target,target,3,20088,'Завтрак с 1+1'. Информационно-развлекательная программа.,Развлечения,True
+6519574208115912303,News/film generalist,target,target,4,240081,Факты.,Инфо,True
+6519574208115912303,News/film generalist,target,target,5,2400508,Сегодня.,Инфо,True
+6519574208115912303,News/film generalist,history,history,1,2400480,ТСН.,Инфо,False
+6519574208115912303,News/film generalist,history,history,2,240081,Факты.,Инфо,False
+6519574208115912303,News/film generalist,history,history,3,20088,'Завтрак с 1+1'. Информационно-развлекательная программа.,Развлечения,False
+6519574208115912303,News/film generalist,history,history,4,2400508,Сегодня.,Инфо,False
+6519574208115912303,News/film generalist,history,history,5,5900256,Утро с Украиной.,Инфо,False
+6519574208115912303,News/film generalist,history,history,6,200344,'Чистоnews'.,Развлечения,False
+6519574208115912303,News/film generalist,history,history,7,200337,Утро с Интером.,Развлечения,False
+6519574208115912303,News/film generalist,history,history,8,90081719,Х/ф 'Патрик'.,Фильмы,False
+6519574208115912303,News/film generalist,recommendation,popularity,1,2400480,ТСН.,Инфо,True
+6519574208115912303,News/film generalist,recommendation,popularity,2,240081,Факты.,Инфо,True
+6519574208115912303,News/film generalist,recommendation,popularity,3,2400467,'Викна-Новости'.,Инфо,False
+6519574208115912303,News/film generalist,recommendation,popularity,4,2400508,Сегодня.,Инфо,True
+6519574208115912303,News/film generalist,recommendation,popularity,5,20088,'Завтрак с 1+1'. Информационно-развлекательная программа.,Развлечения,True
+6519574208115912303,News/film generalist,recommendation,cbf,1,2400508,Сегодня.,Инфо,True
+6519574208115912303,News/film generalist,recommendation,cbf,2,5900256,Утро с Украиной.,Инфо,False
+6519574208115912303,News/film generalist,recommendation,cbf,3,20088,'Завтрак с 1+1'. Информационно-развлекательная программа.,Развлечения,True
+6519574208115912303,News/film generalist,recommendation,cbf,4,240081,Факты.,Инфо,True
+6519574208115912303,News/film generalist,recommendation,cbf,5,5900275,'Утро России'.,Инфо,False
+6519574208115912303,News/film generalist,recommendation,ar,1,2400480,ТСН.,Инфо,True
+6519574208115912303,News/film generalist,recommendation,ar,2,240081,Факты.,Инфо,True
+6519574208115912303,News/film generalist,recommendation,ar,3,2400508,Сегодня.,Инфо,True
+6519574208115912303,News/film generalist,recommendation,ar,4,2400467,'Викна-Новости'.,Инфо,False
+6519574208115912303,News/film generalist,recommendation,ar,5,20088,'Завтрак с 1+1'. Информационно-развлекательная программа.,Развлечения,True
+6519574208115912303,News/film generalist,recommendation,mf,1,200337,Утро с Интером.,Развлечения,True
+6519574208115912303,News/film generalist,recommendation,mf,2,20088,'Завтрак с 1+1'. Информационно-развлекательная программа.,Развлечения,True
+6519574208115912303,News/film generalist,recommendation,mf,3,2400508,Сегодня.,Инфо,True
+6519574208115912303,News/film generalist,recommendation,mf,4,240081,Факты.,Инфо,True
+6519574208115912303,News/film generalist,recommendation,mf,5,2400480,ТСН.,Инфо,True
+6519574208115912303,News/film generalist,recommendation,ppr,1,2400480,ТСН.,Инфо,True
+6519574208115912303,News/film generalist,recommendation,ppr,2,240081,Факты.,Инфо,True
+6519574208115912303,News/film generalist,recommendation,ppr,3,20088,'Завтрак с 1+1'. Информационно-развлекательная программа.,Развлечения,True
+6519574208115912303,News/film generalist,recommendation,ppr,4,2400508,Сегодня.,Инфо,True
+6519574208115912303,News/film generalist,recommendation,ppr,5,2400467,'Викна-Новости'.,Инфо,False
+6519574208115912303,News/film generalist,recommendation,hybrid,1,2400480,ТСН.,Инфо,True
+6519574208115912303,News/film generalist,recommendation,hybrid,2,240081,Факты.,Инфо,True
+6519574208115912303,News/film generalist,recommendation,hybrid,3,20088,'Завтрак с 1+1'. Информационно-развлекательная программа.,Развлечения,True
+6519574208115912303,News/film generalist,recommendation,hybrid,4,2400508,Сегодня.,Инфо,True
+6519574208115912303,News/film generalist,recommendation,hybrid,5,200337,Утро с Интером.,Развлечения,True
+14874594108965844718,Family and serial viewer,target,target,1,2400480,ТСН.,Инфо,True
+14874594108965844718,Family and serial viewer,target,target,2,12001682,М/с 'Губка Боб Квадратные Штаны'.,Детям,True
+14874594108965844718,Family and serial viewer,target,target,3,20088,'Завтрак с 1+1'. Информационно-развлекательная программа.,Развлечения,True
+14874594108965844718,Family and serial viewer,target,target,4,1000589,"Т/с 'Отчаянные домохозяйки', 1 сезон, 10 с. 'Возвращайся'.",Сериалы,True
+14874594108965844718,Family and serial viewer,target,target,5,10003012,Т/с 'Однажды в Одессе'.,Сериалы,True
+14874594108965844718,Family and serial viewer,history,history,1,12001734,М/с 'Волшебные покровители'.,Детям,False
+14874594108965844718,Family and serial viewer,history,history,2,12001682,М/с 'Губка Боб Квадратные Штаны'.,Детям,False
+14874594108965844718,Family and serial viewer,history,history,3,2400480,ТСН.,Инфо,False
+14874594108965844718,Family and serial viewer,history,history,4,12002355,М/с 'Кунг-фу панда: Удивительные легенды'.,Детям,False
+14874594108965844718,Family and serial viewer,history,history,5,10003012,Т/с 'Однажды в Одессе'.,Сериалы,False
+14874594108965844718,Family and serial viewer,history,history,6,6200371,ДжеДАИ.,Познавательное,False
+14874594108965844718,Family and serial viewer,history,history,7,400355,"Киев днем и ночью, 5 сезон, 12 эп.",Развлечения,False
+14874594108965844718,Family and serial viewer,history,history,8,120080373,М/ф 'Босс-молокосос'.,Детям,False
+14874594108965844718,Family and serial viewer,recommendation,popularity,1,2400480,ТСН.,Инфо,True
+14874594108965844718,Family and serial viewer,recommendation,popularity,2,240081,Факты.,Инфо,False
+14874594108965844718,Family and serial viewer,recommendation,popularity,3,2400467,'Викна-Новости'.,Инфо,False
+14874594108965844718,Family and serial viewer,recommendation,popularity,4,2400508,Сегодня.,Инфо,False
+14874594108965844718,Family and serial viewer,recommendation,popularity,5,20088,'Завтрак с 1+1'. Информационно-развлекательная программа.,Развлечения,True
+14874594108965844718,Family and serial viewer,recommendation,cbf,1,12001734,М/с 'Волшебные покровители'.,Детям,False
+14874594108965844718,Family and serial viewer,recommendation,cbf,2,12001732,М/с 'Пингвины из 'Мадагаскара'.,Детям,False
+14874594108965844718,Family and serial viewer,recommendation,cbf,3,12002540,Kids' Time. М/с 'Шоу Луни Тюнз'.,Детям,False
+14874594108965844718,Family and serial viewer,recommendation,cbf,4,12001682,М/с 'Губка Боб Квадратные Штаны'.,Детям,True
+14874594108965844718,Family and serial viewer,recommendation,cbf,5,120070654,"М/ф 'Облачно, возможны осадки в виде фрикаделек'.",Детям,False
+14874594108965844718,Family and serial viewer,recommendation,ar,1,240081,Факты.,Инфо,False
+14874594108965844718,Family and serial viewer,recommendation,ar,2,2400480,ТСН.,Инфо,True
+14874594108965844718,Family and serial viewer,recommendation,ar,3,2400467,'Викна-Новости'.,Инфо,False
+14874594108965844718,Family and serial viewer,recommendation,ar,4,200344,'Чистоnews'.,Развлечения,False
+14874594108965844718,Family and serial viewer,recommendation,ar,5,2400508,Сегодня.,Инфо,False
+14874594108965844718,Family and serial viewer,recommendation,mf,1,12001682,М/с 'Губка Боб Квадратные Штаны'.,Детям,True
+14874594108965844718,Family and serial viewer,recommendation,mf,2,12001734,М/с 'Волшебные покровители'.,Детям,False
+14874594108965844718,Family and serial viewer,recommendation,mf,3,1000589,"Т/с 'Отчаянные домохозяйки', 1 сезон, 10 с. 'Возвращайся'.",Сериалы,True
+14874594108965844718,Family and serial viewer,recommendation,mf,4,6200371,ДжеДАИ.,Познавательное,False
+14874594108965844718,Family and serial viewer,recommendation,mf,5,10003012,Т/с 'Однажды в Одессе'.,Сериалы,True
+14874594108965844718,Family and serial viewer,recommendation,ppr,1,2400480,ТСН.,Инфо,True
+14874594108965844718,Family and serial viewer,recommendation,ppr,2,240081,Факты.,Инфо,False
+14874594108965844718,Family and serial viewer,recommendation,ppr,3,12001682,М/с 'Губка Боб Квадратные Штаны'.,Детям,True
+14874594108965844718,Family and serial viewer,recommendation,ppr,4,2400467,'Викна-Новости'.,Инфо,False
+14874594108965844718,Family and serial viewer,recommendation,ppr,5,12001734,М/с 'Волшебные покровители'.,Детям,False
+14874594108965844718,Family and serial viewer,recommendation,hybrid,1,12001682,М/с 'Губка Боб Квадратные Штаны'.,Детям,True
+14874594108965844718,Family and serial viewer,recommendation,hybrid,2,2400480,ТСН.,Инфо,True
+14874594108965844718,Family and serial viewer,recommendation,hybrid,3,12001734,М/с 'Волшебные покровители'.,Детям,False
+14874594108965844718,Family and serial viewer,recommendation,hybrid,4,20088,'Завтрак с 1+1'. Информационно-развлекательная программа.,Развлечения,True
+14874594108965844718,Family and serial viewer,recommendation,hybrid,5,240081,Факты.,Инфо,False

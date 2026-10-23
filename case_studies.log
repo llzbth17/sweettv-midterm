@@ -1,0 +1,116 @@
+  popularity   shape=(1124, 6376) nonzero_rows=1124 time=0.0s {}
+  cbf          shape=(1124, 6376) nonzero_rows=1115 time=0.8s {'features': 20336, 'seconds': 0.76}
+  ar           shape=(1124, 6376) nonzero_rows=1115 time=0.2s {'rules': 63377, 'items_with_rules': 1947, 'seconds': 0.23}
+  mf           shape=(1124, 6376) nonzero_rows=1115 time=0.1s {'factors': 32, 'explained_variance': 0.29093867540359497, 'seconds': 0.05}
+  ppr          shape=(1124, 6376) nonzero_rows=1115 time=1.1s {'alpha': 0.15, 'iterations': 20, 'seconds': 1.07}
+{
+  "6519574208115912303": {
+    "role": "News/film generalist",
+    "history_distinct": 23,
+    "history_full_views": 41.0,
+    "history_categories": [
+      [
+        "\u0418\u043d\u0444\u043e",
+        6
+      ],
+      [
+        "\u0424\u0438\u043b\u044c\u043c\u044b",
+        6
+      ],
+      [
+        "\u0420\u0430\u0437\u0432\u043b\u0435\u0447\u0435\u043d\u0438\u044f",
+        5
+      ],
+      [
+        "\u041f\u043e\u0437\u043d\u0430\u0432\u0430\u0442\u0435\u043b\u044c\u043d\u043e\u0435",
+        3
+      ],
+      [
+        "\u0421\u0435\u0440\u0438\u0430\u043b\u044b",
+        2
+      ],
+      [
+        "\u0414\u0440\u0443\u0433\u043e\u0435",
+        1
+      ]
+    ],
+    "target_categories": [
+      [
+        "\u0418\u043d\u0444\u043e",
+        3
+      ],
+      [
+        "\u0420\u0430\u0437\u0432\u043b\u0435\u0447\u0435\u043d\u0438\u044f",
+        2
+      ]
+    ],
+    "hybrid_ap": 1.0,
+    "hits": {
+      "popularity": 4,
+      "cbf": 3,
+      "ar": 4,
+      "mf": 5,
+      "ppr": 4,
+      "hybrid": 5
+    }
+  },
+  "14874594108965844718": {
+    "role": "Family and serial viewer",
+    "history_distinct": 30,
+    "history_full_views": 44.0,
+    "history_categories": [
+      [
+        "\u0424\u0438\u043b\u044c\u043c\u044b",
+        10
+      ],
+      [
+        "\u0414\u0435\u0442\u044f\u043c",
+        5
+      ],
+      [
+        "\u0418\u043d\u0444\u043e",
+        5
+      ],
+      [
+        "\u0421\u0435\u0440\u0438\u0430\u043b\u044b",
+        5
+      ],
+      [
+        "\u0420\u0430\u0437\u0432\u043b\u0435\u0447\u0435\u043d\u0438\u044f",
+        3
+      ],
+      [
+        "\u041f\u043e\u0437\u043d\u0430\u0432\u0430\u0442\u0435\u043b\u044c\u043d\u043e\u0435",
+        2
+      ]
+    ],
+    "target_categories": [
+      [
+        "\u0421\u0435\u0440\u0438\u0430\u043b\u044b",
+        2
+      ],
+      [
+        "\u0418\u043d\u0444\u043e",
+        1
+      ],
+      [
+        "\u0414\u0435\u0442\u044f\u043c",
+        1
+      ],
+      [
+        "\u0420\u0430\u0437\u0432\u043b\u0435\u0447\u0435\u043d\u0438\u044f",
+        1
+      ]
+    ],
+    "hybrid_ap": 0.55,
+    "hits": {
+      "popularity": 2,
+      "cbf": 1,
+      "ar": 1,
+      "mf": 3,
+      "ppr": 2,
+      "hybrid": 3
+    }
+  }
+}
+wrote /Users/emgringruz/Desktop/sweettv/midterm_results/case_studies.csv
