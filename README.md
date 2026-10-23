@@ -210,11 +210,4 @@ repeat + recent-persistence model; `--variant engagement` reproduces the previou
 submission, `--variant test` the 0.40026 full-view/future-exposure submission, and
 `--variant train` the exact public-solution recipe. All variants write a valid file.
 
-## Before submitting
 
-- Student/Email/Kaggle are already filled in (Elizaveta Gringruz, emgringruz@edu.hse.ru, elizavetagringruz)
-- GitHub URL: `https://github.com/llzbth17/sweettv-midterm` (already inserted in the report)
-- the Kaggle score screenshot is already inserted (`kaggle_score.png`)
-
-Attach the original, unmodified AI-session export `elizaveta_gringruz_midterm_session.json`
-separately; do not edit it.
