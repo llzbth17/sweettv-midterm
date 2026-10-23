@@ -237,7 +237,7 @@ python3 midterm/report.py                  # this PDF
 
 **What I trusted without independent verification.** The official Kaggle MAP@5 implementation and the hidden private-test distribution; the exact organiser tie-break for users with fewer than five full views; and the assumption that EPG metadata for the evaluation window is available at recommendation time. These are stated as assumptions, not verified facts.
 
-**Session log.** The original, unmodified AI-session export is attached separately (`<student>_midterm_session.json`). It was not edited. The report claims and the session should be read together.
+**Session log.** The AI-session export has been made, in the same format as the previous assignments (e.g. hw6): `elizaveta_gringruz_midterm_session.json`. It is the original export, unmodified, and is attached with the work. The report claims and the session should be read together.
 
 ## References
 
